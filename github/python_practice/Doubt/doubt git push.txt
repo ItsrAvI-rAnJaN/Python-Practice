@@ -1,0 +1,14 @@
+$ git push origin EvenOROdd
+Enumerating objects: 37, done.
+Counting objects: 100% (37/37), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (21/21), 6.32 KiB | 647.00 KiB/s, done.
+Total 21 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), completed with 8 local objects.
+remote:
+remote: Create a pull request for 'EvenOROdd' on GitHub by visiting:
+remote:      https://github.com/ravi04ez/BasicCoreProgramming/pull/new/EvenOROdd
+remote:
+To https://github.com/ravi04ez/BasicCoreProgramming.git
+ * [new branch]      EvenOROdd -> EvenOROdd

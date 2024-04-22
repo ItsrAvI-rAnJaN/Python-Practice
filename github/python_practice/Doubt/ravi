@@ -1,0 +1,73 @@
+//////// program.cs///////
+
+using System;
+
+namespace fundamental_pr
+{
+    class program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\t\t*******Welcome to Fundamental Programming******");
+            Console.WriteLine("Q1. Check Prime Number or Not");
+            Console.WriteLine(" Enter The Number Question");
+            int Choice=Convert.ToInt32(Console.ReadLine());
+
+            switch (Choice)
+            {
+                case 1:
+                    Primenumber objcheckprime = new Primenumber();
+                    objcheckprime.Checkprime();
+                    break;
+                default:
+                    Console.WriteLine("invalid Input");
+                    break;
+
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+/////////////////////////primeno.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace fundamental_pr
+{
+    public class Primenumber
+    {
+        public void Checkprime()
+        {
+            int Temp = 0;
+            Console.Write("enter The Number Check Whether Prime Number or Not : ");
+            int Number =Convert .ToInt32(Console.ReadLine());
+            if (Number > 0)
+            {
+                for(int i = 2; i < Number/2; i++)
+                {
+                    if(Number % 2 == 0)
+                    {
+                        Temp = 1;
+                        break;
+                    }
+
+                }
+                if (Temp == 0)
+                {
+                    Console.WriteLine(" The Number You Enter is Not a Prime Number");
+                }
+                else
+                {
+                    Console.WriteLine("The Number You Enter is Not a Prime Number");
+                }
+
+            }
+
+        }
+    }
+}

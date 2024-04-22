@@ -1,0 +1,60 @@
+Break example
+int i = 1;
+for (i <= 10) 
+{
+  if (i == 4) 
+  {
+    break;
+  }
+  Console.WriteLine(i);
+}
+int i = 1; 
+for (i <= 10) 
+{
+  if (i == 4) 
+  {
+    continue;
+  }
+  Console.WriteLine(i);
+  i++;
+}
+Mentors Fellowship8:59 AM
+Guys ignore above code
+Mentors Fellowship9:13 AM
+=================================
+// Break Example
+int i = 1; 
+while (i <= 10) 
+{
+  if (i == 5) 
+  {
+    continue;
+  }
+  Console.WriteLine(i);
+  i++;
+}
+Console.WriteLine("While loop execution completed")
+
+// Continue Example
+int j = 1
+while (j <= 10) 
+{
+  if (j == 5) 
+  {
+    break;
+  }
+  Console.WriteLine(j);
+  j++;
+}
+Console.WriteLine("While loop execution completed");
+
+// return Example
+int k = 1
+while (k <= 10) 
+{
+  if (k == 5) 
+  {
+    Console.WriteLine("while loop execution will stop when k == {0}", k);
+    return;
+  }
+  

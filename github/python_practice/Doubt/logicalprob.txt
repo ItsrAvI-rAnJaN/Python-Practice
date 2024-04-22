@@ -1,0 +1,188 @@
+ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        BasicCoreProgramming/.vs/BasicCoreProgramming/DesignTimeBuild/.dtbcache.v2
+        BasicCoreProgramming/.vs/BasicCoreProgramming/v17/.futdcache.v1
+        BasicCoreProgramming/.vs/BasicCoreProgramming/v17/.suo
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LogiCSharpProg
+{
+    public class FibonacciSeries
+    {
+        public void calcFibonacciSeries()
+        {    
+            //Taking Variable Num1,Num2 ,num3 to store fabonacci series
+            int num1 =0;
+            int num2 =1;
+            int num3;
+
+            // Taking Input from User of Length of Fabonacci Series...
+            Console.Write("Enter The Nth Length of Fabonacci Series :");
+            int LengthOfFabonacci =Convert.ToInt32(Console.ReadLine());  // Storing Length of Fabonacci Series...
+
+            //printing first & Second term of Fabonacci Series
+            Console.Write("Fabonacci series of {0}th lengths are {1},{2}",LengthOfFabonacci,num1,num2);
+
+            // Defing Logic For Loop to get the Fabonacci Series..
+            for (int i = 2; i < LengthOfFabonacci; i++)
+            {
+                num3 = num1 + num2;
+
+                //printing term of fabonacci series from 3 to nth Length Enter by User..
+                Console.Write(","+num3 );
+                num1 = num2;
+                num2 = num3;
+            }
+           
+
+
+
+        }
+
+    }
+}
+
+
+//////////////////////////////
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LogiCSharpProg
+{
+    internal class PerfectNumber
+    {
+
+        // The Number is Equal to The Sum of its Divisor is Perfect number (Exceuding Number itself)
+        public void CheckPerfectNo()
+        {
+            int Sum = 0; //taking varible where we can store sum of divisor of number
+
+            //Taking Input Number From User to Check Perfert or not
+            Console.Write("Enter The Number You Want to Check Perfect or Not : ");
+            int Number =Convert.ToInt32(Console.ReadLine()); // Storing Number in Number Variable Enter By User & Convert Into integer
+
+            // define logic For Loop to get Sum of its Divisor of Number
+            for (int i = 1; i < Number; i++)
+            {
+                if (Number%i == 0)
+                {
+                    Sum=Sum +i;
+                }
+                   
+            }
+            // Using if else Block to Check & Print Number is Perfect or Not
+            if (Sum == Number)   
+            {
+                Console.WriteLine("The Number You Enter {0} is a Perfect Number",Number);
+            }
+            else
+            {
+                Console.WriteLine("The Number You Enter {0} is Not a Perfect Number",Number);
+            }
+
+
+        }
+    }
+}
+////////////////
+using System;
+
+namespace LogiCSharpProg
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("*****Welcome to C# Logical Programming*****\n ");
+            Console.WriteLine("Q1.To Print Fibonacci Series ");
+            Console.WriteLine("Q2.Check The Number Is Perfect or Not");
+
+            // Taking Input From User of Question Number..
+            Console.Write("->Enter The Choice of Question Number : ");
+
+            // Storing The input Fom User in Choice Varible & Convert Into Integer..
+            int Choice =Convert.ToInt32(Console.ReadLine());
+
+            switch (Choice)
+            {
+                case 1:
+                    // Creating Object of FibonacciSeries class..
+                    FibonacciSeries objfibonacci = new FibonacciSeries();
+
+                    // Calling Method Define in FibonacciSeries Class
+                    objfibonacci.calcFibonacciSeries();
+                    break;
+                case 2:
+                    // Creating Object of PerfectNumber class..
+                    PerfectNumber objperfectno = new PerfectNumber();
+
+                    //calling Method Define in PerfectNumber class
+                    objperfectno.CheckPerfectNo();
+                    break;
+
+
+            }
+             Console.ReadKey();
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LogiCSharpProg
+{
+    internal class FibonacciSeries
+    {
+
+        // sum of previous  two number is next term in Fabonacci Series... 
+        public void calcFibonacciSeries()
+        {    
+            //Taking Variable Num1,Num2 ,num3 to store fabonacci series
+            int num1 =0;
+            int num2 =1;
+            int num3;
+
+            // Taking Input from User of Length of Fabonacci Series...
+            Console.Write("Enter The Nth Length of Fabonacci Series : ");
+            int LengthOfFabonacci =Convert.ToInt32(Console.ReadLine());  // Storing Length or term  of Fabonacci Series...
+
+            //printing first & Second term of Fabonacci Series
+            Console.Write("Fabonacci series of {0}th lengths are {1},{2}",LengthOfFabonacci,num1,num2);
+
+            // Defing Logic For Loop to get the Fabonacci Series..
+            for (int i = 2; i < LengthOfFabonacci; i++)
+            {
+                num3 = num1 + num2;
+
+                //printing term of fabonacci series from 3 to Nth Term Enter by User..
+                Console.Write(","+num3 );
+                num1 = num2; 
+                num2 = num3;
+            }
+           
+
+
+
+        }
+
+    }
+}
+
